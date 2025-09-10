@@ -101,7 +101,10 @@ class Sub:
         if isinstance(self.p2, Add) or isinstance(self.p2, Sub):
             right = f"( {right} )"
         return f"{left} - {right}" 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0dec0b5 (Implemented mul and div __repr__ methods.)
 
     def evaluate(self, x_value):
         # TODO: Implement evaluation for subtraction
