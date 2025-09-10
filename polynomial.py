@@ -100,11 +100,15 @@ class Sub:
         # this keeps the order
         if isinstance(self.p2, Add) or isinstance(self.p2, Sub):
             right = f"( {right} )"
+<<<<<<< HEAD
         return f"{left} - {right}" 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 0dec0b5 (Implemented mul and div __repr__ methods.)
+=======
+        return f"{left} - {right}"
+>>>>>>> 360a11f (Reformatted with black.)
 
     def evaluate(self, x_value):
         # TODO: Implement evaluation for subtraction
@@ -130,8 +134,11 @@ class Div:
         left = repr(self.p1)
         right = repr(self.p2)
 
+<<<<<<< HEAD
         # it really only matters if we have to do something to the second
         # operand before we divide
+=======
+>>>>>>> 360a11f (Reformatted with black.)
         if isinstance(self.p2, (Add, Sub, Mul, Div)):
             right = f"( {right} )"
 
