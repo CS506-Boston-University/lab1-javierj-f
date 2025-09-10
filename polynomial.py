@@ -89,7 +89,19 @@ class Sub:
         # TODO: Implement string representation for subtraction
         # Should handle parentheses similar to Mul class
         # Hint: Look at how Mul class handles parentheses
-        pass
+        # create new variables for our representations
+        # to simplify
+        left = repr(self.p1)
+        right = repr(self.p2)
+
+        # we only really care about the right operand
+        # this is in case we have to wrap it in parentheses
+        # (a - b) - c is not the same as a - (b - c)
+        # this keeps the order
+        if isinstance(self.p2, Add) or isinstance(self.p2, Sub):
+            right = f"( {right} )"
+        return f"{left} - {right}" 
+
 
     def evaluate(self, x_value):
         # TODO: Implement evaluation for subtraction
