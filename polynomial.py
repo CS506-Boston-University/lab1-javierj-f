@@ -124,7 +124,15 @@ class Div:
         # TODO: Implement string representation for division
         # Should handle parentheses similar to Mul class
         # Hint: Look at how Mul class handles parentheses
-        pass
+        left = repr(self.p1)
+        right = repr(self.p2)
+
+        # it really only matters if we have to do something to the second
+        # operand before we divide
+        if isinstance(self.p2, (Add, Sub, Mul, Div)):
+            right = f"( {right} )"
+
+        return f"{left} / {right}"
 
     def evaluate(self, x_value):
         # TODO: Implement evaluation for division
